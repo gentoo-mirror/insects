@@ -5,7 +5,7 @@ EAPI=8
 
 inherit unpacker
 
-DESCRIPTION="Using this software you can easily connect your device to eduroam® by simply logging in with your DFN-AAI account."
+DESCRIPTION="Easily connect your device to eduroam®."
 HOMEPAGE="https://easyroam.de/"
 SRC_URI="http://packages.easyroam.de/repos/easyroam-desktop/pool/main/e/easyroam-desktop/easyroam_connect_desktop-${PV}+${PV}-linux.deb"
 
@@ -30,7 +30,9 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	sed -i "s/Exec=easyroam_connect_desktop/Exec=\/usr\/share\/easyroam_connect_desktop\/easyroam_connect_desktop/" "${S}/usr/share/applications/easyroam_connect_desktop.desktop"
+	sed -i \
+		"s/Exec=easyroam_connect_desktop/Exec=\/usr\/share\/easyroam_connect_desktop\/easyroam_connect_desktop/" \
+		"${S}/usr/share/applications/easyroam_connect_desktop.desktop"
 	default
 }
 
