@@ -1,0 +1,19 @@
+#!/sbin/openrc-run
+
+name=OpenLinkHub
+description="Open source interface for iCUE LINK System Hub, Corsair AIOs and Hubs"
+supervisor="supervise-daemon"
+command="/opt/OpenLinkHub/OpenLinkHub"
+supervise_daemon_args=" -d /opt/OpenLinkHub"
+command_user="openlinkhub:openlinkhub"
+
+depend() {
+        after sleep 
+}
+
+reload() {
+        ebegin "Reloading OpenLinkHub"
+        /bin/kill -s HUP \$MAINPID
+        eend $?
+}
+
