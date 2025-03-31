@@ -19,6 +19,7 @@ DEPEND="acct-group/openlinkhub
 		acct-user/openlinkhub"
 RDEPEND="${DEPEND}
 		 virtual/udev
+		 virtual/libudev
 		 sys-apps/usbutils"
 BDEPEND=""
 
