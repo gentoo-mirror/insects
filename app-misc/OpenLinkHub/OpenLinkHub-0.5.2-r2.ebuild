@@ -8,7 +8,7 @@ inherit go-module systemd udev
 DESCRIPTION="Open source interface for iCUE LINK Hub and other Corsair AIOs, Hubs for Linux"
 HOMEPAGE="https://github.com/jurkovic-nikola/OpenLinkHub"
 SRC_URI="https://github.com/jurkovic-nikola/OpenLinkHub/archive/${PV}.tar.gz -> ${P}.tar.gz"
-SRC_URI+=" https://insects-gentoo.fly.storage.tigris.dev/${P}-deps.tar.xz"
+SRC_URI+=" https://git.insects.institute/insects/portage-tarballs/releases/download/${P}/${P}-deps.tar.xz"
 
 LICENSE="GPL-3"
 LICENSE+=" MIT Apache-2.0 BSD-2"
