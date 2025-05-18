@@ -13,7 +13,6 @@ SRC_URI+=" https://git.insects.institute/insects/portage-tarballs/releases/downl
 LICENSE="GPL-3"
 LICENSE+=" MIT Apache-2.0 BSD-2"
 SLOT="0"
-KEYWORDS="~amd64"
 
 DEPEND="acct-group/openlinkhub
 		acct-user/openlinkhub"
